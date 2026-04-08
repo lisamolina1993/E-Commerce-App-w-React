@@ -13,11 +13,11 @@ const BookInfo = ({ books, addToCart, cart }) => {
 
   function addBookToCart(book) {
     addToCart(book);
-    console.log('added to cart')
+    // console.log('added to cart')
   }
 
   function bookExistsOnCart() {
-    return cart.find(book => book.id === +id)
+    return cart.find(book => +book.id === +id)
   }
 
   return (
@@ -26,12 +26,12 @@ const BookInfo = ({ books, addToCart, cart }) => {
         <div className="books__container">
           <div className="row">
             <div className="book__selected--top">
-              <a href="/books" className="book__link">
+              <Link to="/books" className="book__link">
                 <FontAwesomeIcon icon="arrow-left" />
-              </a>
-              <a href="/books" className="book__link">
+              </Link>
+              <Link to="/books" className="book__link">
                 <h2 className="book__selected--title--top">Books</h2>
-              </a>
+              </Link>
             </div>
             <div className="book__selected">
               <figure className="book__selected--figure">
