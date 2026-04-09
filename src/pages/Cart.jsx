@@ -31,7 +31,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                   return (
                     <div className="cart__item" key={book.id}>
                       <div className="cart__book">
-                        <img src={book.url} className="cart__book--img" />
+                        <img src={book.url} className="cart__book--img" alt={book.title} />
                         <div className="cart__book--info">
                           <span className="cart__book--title">
                             {book.title}
